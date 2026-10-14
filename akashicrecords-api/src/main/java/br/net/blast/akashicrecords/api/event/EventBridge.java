@@ -1,4 +1,4 @@
-package br.net.blast.umbriel.api.event;
+package br.net.blast.akashicrecords.api.event;
 
 import org.bukkit.event.Event;
 import org.jetbrains.annotations.NotNull;
@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * Implementations should not introduce a second, parallel event pipeline: the
  * native event stays authoritative and is only ever read from / written back to,
- * the same way Arclight funnels mod-side item interactions back through
+ * the same way a hybrid server typically funnels mod-side item interactions back through
  * CraftBukkit's existing {@code CraftEventFactory}.
  *
  * @param <N> the platform's native event type

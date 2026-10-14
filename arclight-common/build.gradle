@@ -44,6 +44,7 @@ dependencies {
     implementation libs.snakeyaml
 
     implementation project(':i18n-config')
+    implementation project(':akashicrecords-api')
 }
 
 compileJava {

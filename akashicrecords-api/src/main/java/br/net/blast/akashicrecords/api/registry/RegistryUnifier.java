@@ -1,4 +1,4 @@
-package br.net.blast.umbriel.api.registry;
+package br.net.blast.akashicrecords.api.registry;
 
 import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.NotNull;
@@ -12,7 +12,7 @@ import java.util.Optional;
  * of causing plugins to see {@code null}/unrecognized lookups.
  * <p>
  * This generalizes the "synthesize a fake enum constant, then patch CraftBukkit's
- * lookup tables" trick Arclight applies to {@code Material}, {@code EntityType},
+ * lookup tables" trick applied to {@code Material}, {@code EntityType},
  * {@code World.Environment} and others. An implementation for a given Minecraft
  * version is responsible for the reflective/unsafe plumbing a specific
  * {@code <B>} enum needs; this interface only describes the contract plugins and

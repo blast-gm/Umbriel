@@ -78,6 +78,10 @@ public class BukkitRegistry {
     private static final Map<Integer, Art> ART_BY_ID = Unsafe.getStatic(Art.class, "BY_ID");
     private static final BiMap<Identifier, Statistic> STATS = HashBiMap.create(Unsafe.getStatic(CraftStatistic.class, "statistics"));
 
+    public static EntityType getEntityType(net.minecraft.world.entity.EntityType<?> type) {
+        return ENTITY_NAME_MAP.get(BuiltInRegistries.ENTITY_TYPE.getKey(type).toString());
+    }
+
     public static void registerAll(DedicatedServer console) {
         loadMaterials();
         loadPotions();

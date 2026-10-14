@@ -94,6 +94,7 @@ public class ArclightServer {
             try {
                 LOGGER.info("registry.begin");
                 BukkitRegistry.registerAll(console);
+                io.izzel.arclight.common.mod.server.akashicrecords.UmbrielAkashaPlatform.INSTANCE.toString();
                 org.spigotmc.SpigotConfig.init(new File("./spigot.yml"));
                 org.spigotmc.SpigotConfig.registerCommands();
                 if (VelocitySupport.isEnabled()) {

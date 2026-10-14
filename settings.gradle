@@ -12,7 +12,7 @@ rootProject.name = 'arclight'
 include 'installer'
 include 'i18n-config'
 
-include 'umbriel-api'
+include 'akashicrecords-api'
 
 include 'arclight-common'
 

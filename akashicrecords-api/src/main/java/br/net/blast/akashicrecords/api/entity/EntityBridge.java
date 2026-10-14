@@ -1,11 +1,11 @@
-package br.net.blast.umbriel.api.entity;
+package br.net.blast.akashicrecords.api.entity;
 
 import org.bukkit.entity.Entity;
 import org.jetbrains.annotations.NotNull;
 
 /**
  * Wraps a platform's native entity (a mod-added mob included) as a Bukkit
- * {@link Entity}, mirroring {@link br.net.blast.umbriel.api.item.ItemBridge} for
+ * {@link Entity}, mirroring {@link br.net.blast.akashicrecords.api.item.ItemBridge} for
  * living/non-living entities.
  *
  * @param <N> the platform's native entity type
@@ -25,7 +25,7 @@ public interface EntityBridge<N> {
 
     /**
      * Whether the native entity's type was registered by a mod rather than vanilla
-     * Minecraft, i.e. whether {@link br.net.blast.umbriel.api.registry.RegistryUnifier}
+     * Minecraft, i.e. whether {@link br.net.blast.akashicrecords.api.registry.RegistryUnifier}
      * had to synthesize an {@link org.bukkit.entity.EntityType} for it.
      */
     boolean isModded(@NotNull N nativeEntity);

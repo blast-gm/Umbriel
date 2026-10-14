@@ -1,4 +1,4 @@
-group = 'br.net.blast.umbriel'
+group = 'br.net.blast.akashicrecords'
 
 dependencies {
     compileOnly libs.spigot.api
