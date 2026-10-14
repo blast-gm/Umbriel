@@ -1,7 +1,6 @@
 package io.izzel.arclight.neoforge.mod.event.akashicrecords;
 
 import br.net.blast.akashicrecords.api.event.EventBridge;
-import br.net.blast.akashicrecords.api.platform.Akasha;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import org.bukkit.entity.LivingEntity;
@@ -18,7 +17,7 @@ public final class UmbrielMobSpawnEventBridge
 
     @Override
     public @NotNull CreatureSpawnEvent toBukkit(@NotNull FinalizeSpawnEvent nativeEvent) {
-        LivingEntity entity = (LivingEntity) Akasha.platform().entityBridge().toBukkit(nativeEvent.getEntity());
+        LivingEntity entity = (LivingEntity) AkashaBridges.toBukkit(nativeEvent.getEntity());
         return new CreatureSpawnEvent(entity, toSpawnReason(nativeEvent.getSpawnType()));
     }
 

@@ -1,7 +1,6 @@
 package io.izzel.arclight.neoforge.mod.event.akashicrecords;
 
 import br.net.blast.akashicrecords.api.event.EventBridge;
-import br.net.blast.akashicrecords.api.platform.Akasha;
 import net.minecraft.world.damagesource.DamageSource;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import org.bukkit.entity.Entity;
@@ -19,7 +18,7 @@ public final class UmbrielEntityDamageEventBridge
 
     @Override
     public @NotNull EntityDamageEvent toBukkit(LivingDamageEvent.@NotNull Pre nativeEvent) {
-        Entity entity = Akasha.platform().entityBridge().toBukkit(nativeEvent.getEntity());
+        Entity entity = AkashaBridges.toBukkit(nativeEvent.getEntity());
         EntityDamageEvent.DamageCause cause = toDamageCause(nativeEvent.getSource());
         return new EntityDamageEvent(entity, cause, nativeEvent.getOriginalDamage());
     }

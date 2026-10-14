@@ -1,7 +1,6 @@
 package io.izzel.arclight.neoforge.mod.event.akashicrecords;
 
 import br.net.blast.akashicrecords.api.event.EventBridge;
-import br.net.blast.akashicrecords.api.platform.Akasha;
 import net.minecraft.util.TriState;
 import net.minecraft.world.InteractionHand;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
@@ -22,8 +21,8 @@ public final class UmbrielBlockInteractEventBridge
 
     @Override
     public org.bukkit.event.player.@NotNull PlayerInteractEvent toBukkit(PlayerInteractEvent.@NotNull RightClickBlock nativeEvent) {
-        Player player = (Player) Akasha.platform().entityBridge().toBukkit(nativeEvent.getEntity());
-        var item = Akasha.platform().itemBridge().toBukkit(nativeEvent.getItemStack());
+        Player player = (Player) AkashaBridges.toBukkit(nativeEvent.getEntity());
+        var item = AkashaBridges.toBukkit(nativeEvent.getItemStack());
         var block = CraftBlock.at(nativeEvent.getLevel(), nativeEvent.getPos());
         var face = CraftBlock.notchToBlockFace(nativeEvent.getFace());
         EquipmentSlot hand = nativeEvent.getHand() == InteractionHand.OFF_HAND ? EquipmentSlot.OFF_HAND : EquipmentSlot.HAND;
