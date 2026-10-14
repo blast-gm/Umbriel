@@ -66,8 +66,16 @@ do Bukkit, e as fábricas de metadata (`ItemMeta`/`BlockState`) amarradas às cl
    `RegistryUnifierRegistry`, `AkashaPlatform`.~~ (feito)
 2. ~~Implementação concreta para 1.21.11 (`Umbriel*` em `arclight-common`), publicada
    via `ServiceLoader`.~~ (feito)
-3. Bridges de evento cobrindo pelo menos: uso de item, interação em bloco, dano a
-   entidade, spawn de mob — por ora o `EventBridgeRegistry` está pronto mas vazio.
+3. ~~Bridges de evento cobrindo pelo menos: uso de item, interação em bloco, dano a
+   entidade, spawn de mob.~~ (feito, NeoForge: `UmbrielItemUseEventBridge`,
+   `UmbrielBlockInteractEventBridge`, `UmbrielEntityDamageEventBridge`,
+   `UmbrielMobSpawnEventBridge` em `arclight-neoforge/.../mod/event/akashicrecords`,
+   registrados no `UmbrielEventBridgeRegistry` e assinados no event bus pelo
+   `AkashicRecordsEventDispatcher` no boot do mod. Equivalente para Fabric ainda não
+   existe — Fabric não tem um event bus único como o NeoForge, então precisa de outro
+   ponto de integração por evento.)
 4. Cobertura de `RegistryUnifier` para os blocos/itens/mobs dos mods de teste.
-5. Jar de servidor Umbriel: branding próprio do bootstrap, comando/log confirmando
+5. Testar `RegistryUnifier`/`ItemBridge`/`EntityBridge`/`EventBridge` de ponta a ponta
+   com um mod e um plugin reais — ainda não existe mod/plugin de teste.
+6. Jar de servidor Umbriel: branding próprio do bootstrap, comando/log confirmando
    que plugin e mod veem o mesmo item/entidade através do AkashicRecords.
