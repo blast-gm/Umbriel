@@ -19,6 +19,7 @@ dependencies {
     implementation libs.izzel.tools
     implementation libs.arclight.api
     implementation libs.mixin.tools
+    implementation project(':akashicrecords-api')
 
     implementation(libs.bundles.spigot.shade) { transitive = false }
     shadowBundle(libs.bundles.spigot.shade) { transitive = false }

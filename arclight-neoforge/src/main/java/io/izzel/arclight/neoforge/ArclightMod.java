@@ -4,6 +4,7 @@ import io.izzel.arclight.api.Arclight;
 import io.izzel.arclight.common.mod.server.ArclightServer;
 import io.izzel.arclight.neoforge.mod.NeoForgeArclightServer;
 import io.izzel.arclight.neoforge.mod.event.ArclightEventDispatcherRegistry;
+import io.izzel.arclight.neoforge.mod.event.akashicrecords.AkashicRecordsEventDispatcher;
 import net.neoforged.fml.common.Mod;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -23,6 +24,7 @@ public class ArclightMod {
         System.setOut(new LoggingPrintStream("STDOUT", System.out, Level.INFO));
         System.setErr(new LoggingPrintStream("STDERR", System.err, Level.ERROR));
         ArclightEventDispatcherRegistry.registerAllEventDispatchers();
+        AkashicRecordsEventDispatcher.register();
     }
 
     private static class LoggingPrintStream extends PrintStream {
