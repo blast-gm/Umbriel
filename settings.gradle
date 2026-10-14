@@ -12,6 +12,8 @@ rootProject.name = 'arclight'
 include 'installer'
 include 'i18n-config'
 
+include 'umbriel-api'
+
 include 'arclight-common'
 
 include 'arclight-neoforge'

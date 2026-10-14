@@ -1,0 +1,9 @@
+group = 'br.net.blast.umbriel'
+
+dependencies {
+    compileOnly libs.spigot.api
+}
+
+java {
+    withSourcesJar()
+}
